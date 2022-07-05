@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home </title>
+    {{!--
+    <link rel="stylesheet" href="/css/style.css" /> --}}
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="container-fluid mx-0 px-0">
+        {{>header}}
+        <div class="container">
+            <h1 class="mb-4 text-center">Todo - <span class="fs-5"> Our stop-doing list needs to be bigger than our
+                    to-do list.</span></h1>
+            <form action="" class="mb-5"><label for="heading" class="form-label">Enter The Heading<sup style="color: red; font-size:1rem">*</sup>
+                </label>
+                <div class="input-group flex-nowrap mb-5">
+
+                    <span class="input-group-text" id="addon-wrapping">@</span>
+
+                    <input type="text" class="form-control" id="new-heading" placeholder="Enter heading ..." required>
+                </div>
+                <div class="mb-3">
+                    <label for="new-message" class="form-label">Enter The Message<sup style="color: red; font-size:1rem">*</sup>
+                    </label>
+                    <textarea class="form-control" id="new-message" rows="5" required></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="sub">Add Todo</button>
+            </form>
+            <form action="" id="todo-form">
+                <button class="btn btn-primary m-4" id="del-btn">Delete</button>
+                <ul id="todo-list" class="mt-3">
+
+                   
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
+
+
+
+
+{{!-- <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto mb-2">
+        <div class="fw-bold fs-4">New Heading ...</div>
+        <div class="mt-2">New Message</div>
+        <div class="m-3">
+            <button class="btn btn-primary" id="del-btn">Delete</button>
+            <button class="btn btn-primary" id="edit-btn">Edit</button>
+        </div>
+    </div>
+</li> --}}
+
