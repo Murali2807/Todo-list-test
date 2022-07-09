@@ -1,5 +1,6 @@
 const submitbtn = document.querySelector("#sub");
 const todoList = document.querySelector("#todo-list");
+const listItem = document.querySelector("#list-item");
 const deleteBtn = document.querySelector("#del-btn");
 const editBtn = document.querySelector("#edit-btn");
 
@@ -22,14 +23,14 @@ submitbtn.addEventListener("click", e => {
   </li>`;
   // console.log(newTodo);
   if (newHeading !== "" && newMessage !== "") {
-    todoList.insertAdjacentHTML("afterend", newTodo);
+    listItem.insertAdjacentHTML("afterend", newTodo);
+    deleteBtn.style.display = "block";
     document.getElementById("new-heading").value = "";
     document.getElementById("new-message").value = "";
   } else {
     alert("Enter the required field ... ");
   }
 });
-
 deleteBtn.addEventListener("click", e => {
   e.preventDefault();
   let deleteCheck;
@@ -42,5 +43,8 @@ deleteBtn.addEventListener("click", e => {
         deleteCheck.parentNode.parentNode.parentNode.parentNode
       );
     }
+  }
+  if (todoList.childElementCount === 1) {
+    deleteBtn.style.display = "none";
   }
 });
