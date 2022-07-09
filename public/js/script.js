@@ -9,14 +9,15 @@ submitbtn.addEventListener("click", e => {
   let newHeading = document.getElementById("new-heading").value;
   let newMessage = document.getElementById("new-message").value;
   let newTodo = "";
+  let nowDate = new Date().toLocaleString("en-US");
   newTodo += `<li class='list-group-item d-flex justify-content-between align-items-start'>
   <div class='ms-2 me-auto mb-2 d-flex'>
   <div class="ms-0 mt-2 me-4">
     <span class="input-group-text" id="basic-addon1"> <input class="form-check-input del-check" type="checkbox" value="" id="del-check"></span>
 </div>
   <div>
-    <div class='fw-bold fs-4'> ${newHeading}</div>
-    <div class='mt-2'>${newMessage}</div>
+    <div class='fw-bold fs-4 new-head'> ${newHeading}</div>
+    <div class='mt-1 mb-1 new-meg'>${newMessage} </div><span class="date-format">${nowDate}</span>
     </div>
     
   </div>
