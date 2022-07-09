@@ -21,12 +21,12 @@ app.get("/", (req, res) => {
     createrName: "MURALITHARAN"
   });
 });
-app.get("/about", (req, res) => {
-  res.render("about", {});
-});
-app.get("/doc", (req, res) => {
-  res.render("doc", {});
-});
+// app.get("/about", (req, res) => {
+//   res.render("about", {});
+// });
+// app.get("/doc", (req, res) => {
+//   res.render("doc", {});
+// });
 
 app.listen(URL_PORT, (err, suc) => {
   console.log("connection successfully");
