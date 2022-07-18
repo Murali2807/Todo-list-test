@@ -34,17 +34,15 @@ submitbtn.addEventListener("click", e => {
 });
 deleteBtn.addEventListener("click", e => {
   e.preventDefault();
-  let deleteCheck;
   let deleteChecked = document.querySelectorAll(".del-check");
 
-  for (var i = 0; i < deleteChecked.length; i++) {
-    deleteCheck = deleteChecked[i];
+  deleteChecked.forEach(deleteCheck => {
     if (deleteCheck.checked) {
       deleteCheck.parentNode.parentNode.parentNode.parentNode.parentNode.removeChild(
         deleteCheck.parentNode.parentNode.parentNode.parentNode
       );
     }
-  }
+  });
   if (todoList.childElementCount === 1) {
     deleteBtn.style.display = "none";
   }
